@@ -17,12 +17,10 @@ def login():
 def signup():
     return "Here we sign up"
 
-
 ## Routes to the order page
 @myapp.route('/order')
 def order():
     return "Here we make orders"
-
 
 ## Routes to the FAQ Page
 @myapp.route ('/FAQ')
