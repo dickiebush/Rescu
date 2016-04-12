@@ -11,8 +11,10 @@
 			<h3>Please log in with your email and password</h3>
 			<form style="margin-top: 50px" action="" method="post" name="login">
 				{{ form.hidden_tag() }}
-				{{ form.email(placeholder="Email", style="width: 200px", class_="form-control") }}
-				{{ form.password(placeholder="Password", style="width: 200px", class_="form-control") }}
+				{{ form.email(placeholder="Email", style="width: 275px", class_="form-control") }}
+				<br>
+				{{ form.password(placeholder="Password", style="width: 275px", class_="form-control") }}
+				<br>
 				<p>{{ form.remember_me}} Remember Me</p>
 				<p><input class="btn btn-primary" type="submit" value="Log In"></p>
 			</form>
