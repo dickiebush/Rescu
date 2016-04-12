@@ -5,26 +5,26 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="col-md-6 col-md-offset-3" style="margin-top: 80px">
+	<div style="margin-top: 80px">
 		<center>
 			<h2>Welcome back to Resqu</h2>
 			<h3>Please log in with your email and password</h3>
-		</center>
-		<form class="col-md-6 col-md-offset-3" style="margin-top: 50px" action="" method="post" name="login">
-			{{ form.hidden_tag() }}
-			{{ form.email(placeholder="Email", size=35) }}
-			{{ form.password(placeholder="Password", size=35) }}
-			<p>{{ form.remember_me}} Remember Me</p>
-			<p><input class="btn btn-primary" type="submit" value="Log In"></p>
-		</form>
-		<div class="col-md-6 col-md-offset-3">
-			<p>Don't have an account yet?</p>
-			<form action="{{url_for('signup')}}" method="get" name="sign up">
-				<p>
-					<input class="btn btn-primary" type="submit" value="Sign up"></input>
-				</p>
+			<form style="margin-top: 50px" action="" method="post" name="login">
+				{{ form.hidden_tag() }}
+				{{ form.email(placeholder="Email", size=35, class_="form-group") }}
+				{{ form.password(placeholder="Password", size=35, class_="form-group") }}
+				<p>{{ form.remember_me}} Remember Me</p>
+				<p><input class="btn btn-primary" type="submit" value="Log In"></p>
 			</form>
-		</div>
+			<div>
+				<p>Don't have an account yet?</p>
+				<form action="{{url_for('signup')}}" method="get" name="sign up">
+					<p>
+						<input class="btn btn-primary" type="submit" value="Sign up"></input>
+					</p>
+				</form>
+			</div>
+		</center>
 	</div>
 </body>
 </html>
