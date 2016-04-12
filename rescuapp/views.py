@@ -1,4 +1,4 @@
-from app import myapp
+from rescuapp import myapp
 
 ## Routes to the splash page 
 ## Splash page allows users to log in or sign up
