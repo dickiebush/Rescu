@@ -9,9 +9,9 @@
 		<center>
 			<h2>Welcome back to Resqu</h2>
 			<h3>Please log in with your email and password</h3>
-			
 		</center>
-		<form class="col-md-6 col-md-offset-3" style="margin-top: 50px" method="post">
+		<form class="col-md-6 col-md-offset-3" style="margin-top: 50px" action="" method="post" name="login">
+			{{ form.hidden_tag() }}
 			{{ form.email(placeholder="Email", size=35) }}
 			{{ form.password(placeholder="Password", size=35) }}
 			<p>{{ form.remember_me}} Remember Me</p>
