@@ -1,0 +1,636 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dorm",
+				"dormNumber"
+			],
+			[
+				"lLen",
+				"lLength2"
+			],
+			[
+				"lL",
+				"lLength1"
+			],
+			[
+				"o",
+				"oAddend2"
+			],
+			[
+				"oA",
+				"oAddend2"
+			],
+			[
+				"u",
+				"ulSum"
+			],
+			[
+				"oa",
+				"oAddend2"
+			],
+			[
+				"i",
+				"iLength1"
+			],
+			[
+				"iL",
+				"iLength2"
+			],
+			[
+				"St",
+				"STACK_BYTECOUNT2"
+			],
+			[
+				"oAdd",
+				"oAddend2"
+			],
+			[
+				"server",
+				"serverIP"
+			],
+			[
+				"up",
+				"uDP_port"
+			],
+			[
+				"buck",
+				"bucketCount"
+			],
+			[
+				"Sy",
+				"SymTable_expand"
+			],
+			[
+				"Sym",
+				"SymTable"
+			],
+			[
+				"old",
+				"oldBucketCount"
+			],
+			[
+				"new",
+				"newBucketCount"
+			],
+			[
+				"bucket",
+				"bucketCounts"
+			],
+			[
+				"BUCKETC",
+				"BUCKET_COUNT_4"
+			],
+			[
+				"SymTable",
+				"SymTable_T"
+			],
+			[
+				"correct",
+				"correctBucket"
+			],
+			[
+				"bucketCOunt",
+				"bucketCount"
+			],
+			[
+				"sym",
+				"symtable"
+			],
+			[
+				"BUCKET",
+				"BUCKET_COUNT_1"
+			],
+			[
+				"curr",
+				"currBinding"
+			],
+			[
+				"Str_",
+				"Str_getLength"
+			],
+			[
+				"da",
+				"DataRequired"
+			],
+			[
+				"valid",
+				"validators"
+			],
+			[
+				"login",
+				"login_required"
+			],
+			[
+				"Password",
+				"PasswordField"
+			],
+			[
+				"POSS",
+				"POSSIBLEENDCOMMENT"
+			],
+			[
+				"handle",
+				"handlePossibleComment"
+			],
+			[
+				"POSSIB",
+				"POSSIBLECOMMENT"
+			],
+			[
+				"Po",
+				"POSSIBLEENDCOMMENT"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"comment",
+				"commentStart"
+			],
+			[
+				"handleChar",
+				"handleCharLitEscapeChar"
+			],
+			[
+				"state",
+				"Statetype"
+			],
+			[
+				"E",
+				"ESCAPE"
+			],
+			[
+				"handlepo",
+				"handlePossibleEndComment"
+			],
+			[
+				"POS",
+				"POSSIBLECOMMENT"
+			],
+			[
+				"S",
+				"STRINGLIT"
+			],
+			[
+				"PO",
+				"POSSIBLEENDCOMMENT"
+			],
+			[
+				"home",
+				"homeTiePercentage"
+			],
+			[
+				"awa",
+				"awayLossPercentage"
+			],
+			[
+				"away",
+				"awayLossPercentage"
+			],
+			[
+				"csa",
+				"CircularSuffixArray"
+			],
+			[
+				"Binar",
+				"BinaryStdOut"
+			],
+			[
+				"t",
+				"t	test"
+			],
+			[
+				"N",
+				"N"
+			],
+			[
+				"CSA",
+				"CircularSuffixArray"
+			],
+			[
+				"Bin",
+				"BinaryStdIn"
+			],
+			[
+				"Binr",
+				"BinaryStdOut"
+			],
+			[
+				"Circ",
+				"CircularSuffix"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views.py",
+			"settings":
+			{
+				"buffer_size": 1009,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models.py",
+			"settings":
+			{
+				"buffer_size": 1868,
+				"line_ending": "Unix",
+				"name": "from app import db"
+			}
+		},
+		{
+			"file": "forms.py",
+			"settings":
+			{
+				"buffer_size": 2035,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/richardbush/RescU/rescuapp/db_migrate.py",
+		"/Users/richardbush/RescU/rescuapp/templates/test.HTML",
+		"/Users/richardbush/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/richardbush/RescU/rescuapp/db_create.py",
+		"/Users/richardbush/RescU/rescuapp/config.py",
+		"/Users/richardbush/gofiles/helloagain.go",
+		"/Users/richardbush/gofiles/hello.go",
+		"/Users/richardbush/poold/app/views.py",
+		"/Users/richardbush/poold/app/forms.py",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Week 8/Precept 2 -- Local Variables, Functions/euclidopt.s",
+		"/Users/richardbush/Downloads/Lab5/TCP/LenseServer.java",
+		"/Users/richardbush/Downloads/Lab5/TCP/LenseBuyer.java",
+		"/Users/richardbush/Downloads/Lab5/TCP/LenseRequestHandler.java",
+		"/Users/richardbush/Downloads/Lab5/UDP/vmListener.java",
+		"/Users/richardbush/orf401/Lab5/GateListener.java",
+		"/Users/richardbush/orf401/Lab5/GateKeeper.java",
+		"/Users/richardbush/orf401/Lab5/GateInformationBoard.java",
+		"/Users/richardbush/cos217/Assignment4/mywc.s",
+		"/Users/richardbush/morningafter/app/run.py",
+		"/Users/richardbush/morningafter/flask/bin/python",
+		"/Users/richardbush/cos217/symtablehash.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Week 5/Precept 9 -- Void Pointers, Generic ADTs/voidpointers.c",
+		"/Users/richardbush/cos217/test.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Week 3/Precept 5 -- Pointers/ptrs.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Week 2/Precept 3 -- Simple C Programs/formattedio.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Week 2/Precept 3 -- Simple C Programs/sizes.c",
+		"/Users/richardbush/cos217/makefile",
+		"/Users/richardbush/cos217/testsymtable.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Precepts/Precept 8/stack.h",
+		"/Users/richardbush/cos217/symtable.h",
+		"/Users/richardbush/cos217/symtablelist.c",
+		"/Users/richardbush/Desktop/Dropbox/COS 217/Precepts/Precept 8/stack4.c",
+		"/Users/richardbush/cos217/str.h",
+		"/Users/richardbush/poold/app/templates/signup.html",
+		"/Users/richardbush/orf307/hw3ampl2",
+		"/Users/richardbush/orf307/reset;",
+		"/Users/richardbush/cos217/decomment.c",
+		"/Users/richardbush/poold/app/templates/giveride.html",
+		"/Users/richardbush/orf307/portfolio.txt",
+		"/Users/richardbush/poold/app/templates/giveorfind.html",
+		"/Users/richardbush/poold/app/templates/login.html",
+		"/Users/richardbush/poold/app/templates/findrides.html",
+		"/Users/richardbush/poold/app/models.py",
+		"/Users/richardbush/poold/app/templates/results.html",
+		"/Users/richardbush/poold/app/db_migrate.py",
+		"/Users/richardbush/poold/db_create.py",
+		"/Users/richardbush/poold/app/templates/welcome.html",
+		"/Users/richardbush/pys/app/templates/signup.html",
+		"/Users/richardbush/pys/app/run.py",
+		"/Users/richardbush/pys/app/config.py",
+		"/Users/richardbush/orf307/planes.txt",
+		"/Users/richardbush/orf307/river.txt",
+		"/Users/richardbush/pys/app/templates/susie.html",
+		"/Users/richardbush/pys/app/templates/layout.html",
+		"/Users/richardbush/pys/app/templates/dina.html",
+		"/Users/richardbush/cos/decomment.c",
+		"/Users/richardbush/orf307/food.txt",
+		"/Users/richardbush/orf307/hello.mod.txt",
+		"/Users/richardbush/pys/app/templates/welcome.html",
+		"/Users/richardbush/pys/app/static/css/main.css",
+		"/Users/richardbush/pys/app/hello.py",
+		"/Users/richardbush/pys/app/__init__.py",
+		"/Users/richardbush/pys/runtime.txt",
+		"/Users/richardbush/pys/Procfile",
+		"/Users/richardbush/pys/get-pip.py",
+		"/Users/richardbush/Downloads/Flask-0.10.1/README",
+		"/Users/richardbush/Downloads/poi-3.13 2/src/testcases/org/apache/poi/util/TestHexDump.java",
+		"/Users/richardbush/cos/edu/princeton/cs/algs4/RunLength.java",
+		"/Users/richardbush/cos/GetRichQuick.java",
+		"/Users/richardbush/algs4/ShortestCommonAncestor.java",
+		"/Users/richardbush/Desktop/hold on/OLD introcs/Queue.java",
+		"/Users/richardbush/cos/edu/princeton/cs/algs4/BoyerMoore.java",
+		"/Users/richardbush/algs4/Outcast.java",
+		"/Users/richardbush/algs4/WordNet.java",
+		"/Users/richardbush/cos/CircularSuffixArray.java",
+		"/Users/richardbush/cos/BurrowsWheeler.java",
+		"/Users/richardbush/Desktop/williams.txt",
+		"/Users/richardbush/cos/SeamCarver.java",
+		"/Users/richardbush/algs4/AutocompleteGUI.java",
+		"/Users/richardbush/cos/index.html",
+		"/Users/richardbush/algs4/Percolation.java",
+		"/Users/richardbush/cos/hello.py",
+		"/Users/richardbush/cos/edu/princeton/cs/algs4/StdIn.java",
+		"/Users/richardbush/cos/test.c",
+		"/Users/richardbush/cos/txt.txt",
+		"/Users/richardbush/cos/MoveToFront.java",
+		"/Users/richardbush/cos/Hello.java",
+		"/Users/richardbush/cos/hello.c",
+		"/Users/richardbush/cos/heres some text",
+		"/Users/richardbush/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/richardbush/cos/texty",
+		"/Users/richardbush/cos/edu/princeton/cs/algs4/BinaryStdOut.java",
+		"/Users/richardbush/algs4/edu/princeton/cs/algs4/BinaryStdIn.java",
+		"/Users/richardbush/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/richardbush/Desktop/mytheme.tmTheme",
+		"/Users/richardbush/cos/edu/princeton/cs/algs4/HexDump.java",
+		"/Users/richardbush/Desktop/Dropbox/BurrowsWheeler.java",
+		"/Users/richardbush/algs4/BurrowsWheeler.java",
+		"/Users/richardbush/Desktop/jklhouh",
+		"/lkkljh",
+		"/jklkljhohkl",
+		"/untitled.java",
+		"/heres some text"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"popfd",
+			"eflags",
+			"r14",
+			"EFLAGS",
+			"osum",
+			"##if (ul",
+			"add",
+			"cmpq",
+			"endif1",
+			"stack",
+			"cmpl",
+			"alloc",
+			"BUCKET_COUNT",
+			"ibindingcount",
+			"//",
+			"flash",
+			"\\n",
+			"5:15",
+			"14:25",
+			"about",
+			"url_for",
+			"about",
+			"homeTeam",
+			".*;\n",
+			"save",
+			"c",
+			"StdOut",
+			"256",
+			");\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1638,
+								1638
+							]
+						],
+						"settings":
+						{
+							"auto_name": "from app import db",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1101,
+								1101
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/pys/app/static/css/main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Dropbox/BurrowsWheeler.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

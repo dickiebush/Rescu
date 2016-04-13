@@ -1,30 +1,38 @@
-from rescuapp import myapp
+from rescuapp import myapp, db
+from .forms import LoginForm, SignUpForm, OrderForm 
+from flask.ext.login import login_user, logout_user, current_user, login_required 
+from .models import User, Order
+from flask import make_response, render_template, request, redirect, flash, session, url_for, request, g
 
 ## Routes to the splash page 
 ## Splash page allows users to log in or sign up
 @myapp.route('/')
 @myapp.route('/index')
 def home():
-    return "Hello, World!"
+    return render_template('splash.html')
 
 ## Routes to the login page
 @myapp.route('/login')
 def login():
-    return "Here we log in"
+
+    ## LEFTOFF -- Handle Login backend processing
+    form = LoginForm()
+    return render_template('login.html', form=form)
 
 ## Routes to the signup page
 @myapp.route('/signup')
 def signup():
-    return "Here we sign up"
+
+    ## LEFTOFF -- Put together sin up front end and backend 
+    return render_template('signup.html')
 
 ## Routes to the order page
 @myapp.route('/order')
 def order():
-    return "Here we make orders"
+    return render_template('order.html')
 
 ## Routes to the FAQ Page
-@myapp.route ('/FAQ')
+@myapp.route ('/faq')
 def faq():
-    return "Here is a list of FAQ"
-
+    return render_template('FAQ.html')
 
