@@ -67,7 +67,7 @@ def signup():
         if User.query.get(form.email.data) is None:
 
             ## create a user from form data 
-            u = User(email=form.email.data, password=form.password.data, fullname=form.fullname.data,
+            u = User(email=form.email.data, password=form.password.data, fullname=form.fullName.data,
             dormHall=form.dormHall.data, dormNum = form.dormNum.data)
 
             db.session.add(u)
@@ -77,14 +77,19 @@ def signup():
             return redirect('/order')
 
         ## Send back error saying email is already signed up 
-
+        else:
+            print("This email is already signed up")
+    else:
+        print "Form is not validating"
     ## LEFTOFF -- Put together sin up front end and backend 
-    return render_template('signup.html')
+    return render_template('signup.html', form=form)
 
 ## Routes to the order page
 @myapp.route('/order')
 def order():
-    return render_template('order.html')
+
+    form = OrderForm()
+    return render_template('order.html', form=form)
 
 ## Routes to the FAQ Page
 @myapp.route ('/faq')
