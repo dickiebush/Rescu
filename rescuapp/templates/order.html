@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Order - Resqu</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="col-md-6 col-md-offset-3" style="margin-top: 50px">
+	<div style="margin-top: 50px">
 		<center>
 			<h3>Fill the following form to place an order</h3>
+			<form style="margin-top: 30px" action="" method="post" name="order">
+				{{ form.hidden_tag() }}
+		        {{ form.time(placeholder="Choose a delivery time", style="width: 275px", class_="form-control") }}
+		        {{ form.item1(placeholder="First item", style="width: 275px", class_="form-control") }}
+		        {{ form.item2(placeholder="Second item", style="width: 275px", class_="form-control") }}
+		        {{ form.item3(placeholder="Third item", style="width: 275px", class_="form-control") }}
+		        {{ form.item4(placeholder="Fourth item", style="width: 275px", class_="form-control") }}
+		        {{ form.item5(placeholder="Fifth item", style="width: 275px", class_="form-control") }}
+		        {{ form.item6(placeholder="Sixth item", style="width: 275px", class_="form-control") }}
+		        {{ form.item7(placeholder="Seventh item", style="width: 275px", class_="form-control") }}
+		        <p><input class="btn btn-primary" type="submit" value="Submit your order"></p>
+			</form>
 		</center>
-		<form class="col-md-6 col-md-offset-3" style="margin-top: 30px">
-			<div class="form-group">
-	           <select name="time" class="form-control" placeholder="Delivery time">
-	              <option selected="selected" disabled>Choose a delivery time</option>
-	              <option value="9">9:00 am</option>
-	              <option value="10">10:00 am</option>
-	              <option value="11">11:00 am</option>
-	            </select>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item1" class="form-control" placeholder="First item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item2" class="form-control" placeholder="Second item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item3" class="form-control" placeholder="Third item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item4" class="form-control" placeholder="Fourth item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item5" class="form-control" placeholder="Fifth item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item6" class="form-control" placeholder="Sixth item"></input>
-	        </div>
-	        <div class="form-group">
-	        	<input type="item7" class="form-control" placeholder="Seventh item"></input>
-	        </div>
-	        <div>
-	        	<center>
-	        		<a class="btn btn-primary"href="">Submit your order</a>
-	        	</center>
-	        </div>
-		</form>
 	</div>
 </body>
 </html>
