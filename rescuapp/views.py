@@ -57,8 +57,26 @@ def login():
     return render_template('login.html', form=form)
 
 ## Routes to the signup page
-@myapp.route('/signup')
+@myapp.route('/signup', methods=['GET','POST'])
 def signup():
+
+    form = SignUpForm()
+
+    if form.validate_on_submit():
+
+        if User.query.get(form.email.data) is None:
+
+            ## create a user from form data 
+            u = User(email=form.email.data, password=form.password.data, fullname=form.fullname.data,
+            dormHall=form.dormHall.data, dormNum = form.dormNum.data)
+
+            db.session.add(u)
+            db.session.commit()
+            login_user(u, remember=True);
+
+            return redirect('/order')
+
+        ## Send back error saying email is already signed up 
 
     ## LEFTOFF -- Put together sin up front end and backend 
     return render_template('signup.html')

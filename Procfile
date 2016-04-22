@@ -1,1 +1,1 @@
-web: gunicorn myapp.views:rescuapp
+web: gunicorn rescuapp:myapp
