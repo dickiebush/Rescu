@@ -77,9 +77,6 @@ def signup():
             return redirect('/order')
 
         ## Send back error saying email is already signed up 
-        else:
-
-
 
     ## LEFTOFF -- Put together sin up front end and backend 
     return render_template('signup.html')
