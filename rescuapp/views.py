@@ -1,9 +1,10 @@
-from rescuapp import myapp, db, lm
+from rescuapp import myapp, db, lm, mail
 from .forms import LoginForm, SignUpForm, OrderForm 
 from flask.ext.login import login_user, logout_user, current_user, login_required 
 from .models import User, Order
 from flask import make_response, render_template, request, redirect, flash, session, url_for, request, g
-
+from flask.ext.mail import Message
+from config import ADMINS
 ## Routes to the splash page 
 ## Splash page allows users to log in or sign up
 @myapp.route('/')
@@ -26,6 +27,9 @@ def splash():
 @myapp.route('/login', methods=['GET','POST'])
 def login():
 
+    ##msg = Message('heres some text', sender=ADMINS[0], recipients=ADMINS)
+    ##msg.body = 'heres some text'
+    ##mail.send(msg)
     ## if user is cached and already logged in, take them to order page 
     if g.user is not None and g.user.is_authenticated:
         return order()

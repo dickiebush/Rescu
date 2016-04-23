@@ -20,7 +20,7 @@ class SignUpForm(Form):
 
 ## Order form -- some data pulled from user submitting and rest put through this form 
 class OrderForm(Form):
-    time  = SelectField(u'time', choices=[('9:00 AM', '10:00 AM', '11:00 AM')])
+    time  = SelectField(u'time', choices=[('9am','9:00 AM'), ('10am','10:00 AM'), ('11am', '11:00 AM')])
     item1 = StringField('first item', validators=[validators.DataRequired("You have to order something!")])
     item2 = StringField('second item')
     item3 = StringField('third item')
