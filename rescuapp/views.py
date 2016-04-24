@@ -5,6 +5,7 @@ from .models import User, Order
 from flask import make_response, render_template, request, redirect, flash, session, url_for, request, g
 from flask.ext.mail import Message
 from config import ADMINS
+from datetime import datetime
 ## Routes to the splash page 
 ## Splash page allows users to log in or sign up
 
@@ -112,7 +113,40 @@ def signup():
 def order():
 
     form = OrderForm()
+
+
+    # render template if page load 
+    if request.method == 'GET':
+        return render_template('order.html', form=form)
+
+    orders = Order.query.all()
+
+    num = len(order)
+
+    # if user submitted every field 
+    if form.validate_on_submit():
+
+        # possibly cbeck user hasnt submitted an item 
+        # possibly parse database making sure item is in stock
+        order = Order(num+1, g.user.email, g.user.dormHall, g.user.dormNum, form.time.data, form.item1.data, form.item2.data
+            form.item3.data, form.item4.data, form.item5.data, form.item6.data, form.item7.data, datetime.now()) 
+
+        db.session.add(order)
+        db.session.commit()
+
+        return redirect(url_for(thankyou))
+
+    
     return render_template('order.html', form=form)
+
+
+@myapp.route('/thankyou')
+@login_required
+def thankyou():
+    return "Your order has been sent, thanks!"
+
+
+
 
 ## Routes to the FAQ Page
 @myapp.route ('/faq')
