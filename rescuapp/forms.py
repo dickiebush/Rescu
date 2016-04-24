@@ -11,7 +11,7 @@ class LoginForm(Form):
 
 ## Sign up form, based on all information of db.User model 
 class SignUpForm(Form):
-    email    = StringField('email', validators=[validators.DataRequired(message="Forgot this one!"), validators.Email(message="This doesn't look like an email.."), validators.Length(message="4 to 25 characters please!",min=4, max=25)])
+    email    = StringField('email', validators=[validators.DataRequired(message="Forgot this one!"), validators.Email(message="This doesn't look like an email.."), validators.Regexp('^[a-zA-Z0-9._%+-]+@princeton.edu$', flags=0, message="Sorry, we are currently only support @princeton.edu email addresses"),validators.Length(message="4 to 25 characters please!",min=4, max=25)])
     password = PasswordField('password', validators=[validators.DataRequired("Whoops!"), validators.EqualTo('conPass', message="Passwords must match"), validators.Length(message="6 to 25 characters please!", min=6, max=25)])
     conPass  = PasswordField('conPass', validators=[validators.DataRequired("You forgot me!"), validators.EqualTo('password')],)
     fullName = StringField('fullname', validators=[validators.DataRequired("You forgot me!")])

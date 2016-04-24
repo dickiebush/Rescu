@@ -7,6 +7,8 @@ from flask.ext.mail import Message
 from config import ADMINS
 ## Routes to the splash page 
 ## Splash page allows users to log in or sign up
+
+
 @myapp.route('/')
 @myapp.route('/index')
 def splash():
@@ -14,15 +16,21 @@ def splash():
     ## login form in case of reroute 
     form = LoginForm()
 
+    ## if user is cached and already logged in, take them to order page 
+    if g.user is not None and g.user.is_authenticated:
+        return redirect('/order')
+
     ## if user has seen this before, take them to the login page 
     if request.cookies.get('rescuSplash') == 'yes':
         print("cookie confirmed")
-        return redirect('/login')
+        resp1 = make_response(redirect('/login'))
+        return resp1
     else:
         resp = make_response(render_template('splash.html'))
         resp.set_cookie('rescuSplash', 'yes')   
         return resp
 
+ 
 ## Routes to the login page
 @myapp.route('/login', methods=['GET','POST'])
 def login():
@@ -30,12 +38,13 @@ def login():
     ##msg = Message('heres some text', sender=ADMINS[0], recipients=ADMINS)
     ##msg.body = 'heres some text'
     ##mail.send(msg)
-    ## if user is cached and already logged in, take them to order page 
-    if g.user is not None and g.user.is_authenticated:
-        return order()
 
     form = LoginForm()
 
+    if request.method == 'GET':
+        return render_template('login.html', form = form)
+
+   
     ## if sending a post request and form validates
     if form.validate_on_submit():
         ## query into database looking for user with email name
@@ -50,7 +59,8 @@ def login():
                 else:
                     login_user(user, remember=False)
                 ## succesful login
-                return order()
+                print "successful login"
+                return redirect(url_for('order'))
             ## wrong password 
             else: 
                 return render_template('login.html', form=form, msg1="Incorrect password")
@@ -64,7 +74,15 @@ def login():
 @myapp.route('/signup', methods=['GET','POST'])
 def signup():
 
+    ## error handling a signed in user going here directly 
+    logout_user()
+
     form = SignUpForm()
+
+    if request.method == 'GET':
+        flash("hello world")
+        return render_template('signup.html', form = form)
+   
 
     if form.validate_on_submit():
 
@@ -90,6 +108,7 @@ def signup():
 
 ## Routes to the order page
 @myapp.route('/order')
+@login_required
 def order():
 
     form = OrderForm()

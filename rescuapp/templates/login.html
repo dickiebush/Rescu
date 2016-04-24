@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="-1">
+	
 	<title>Log in - Resqu</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -12,17 +16,38 @@
 			<h3>Please log in with your email and password</h3>
 			<form style="margin-top: 50px" action="" method="post" name="login">
 				{{ form.hidden_tag() }}
+
+
+				{% if msg2 %}
+          		<span style="color: red;">[{{ msg2 }}]</span>
+          		{% endif %}<br>
+          		{% if form.email.errors %}
+          		{% for error in form.email.errors %}
+          		<span style="color: red;">[{{ error }}]</span>
+          		{% endfor %}<br>
+          		{% endif %}
 				{{ form.email(placeholder="Email", style="width: 275px", class_="form-control") }}
 				<br>
+
+				 {% if msg1 %}
+          		<span style="color: red;">[{{ msg1 }}]</span>
+          		{% endif %}<br>
+          		{% if form.password.errors %}
+          		{% for error in form.password.errors %}
+          		<span style="color: red;">[{{ error }}]</span>
+          		{% endfor %}<br>
+          		{% endif %}
 				{{ form.password(placeholder="Password", style="width: 275px", class_="form-control") }}
 				<br>
 				<p>{{ form.remember_me}} Remember Me</p>
-				<p><input class="btn btn-primary" type="submit" value="Log In"></p>
+				<p><input class="btn btn-success" type="submit" value="Log In"></p>
 			</form>
 			<div>
+			<br><br><br>
 				<p>Don't have an account yet?</p>
 				<form action="{{url_for('signup')}}" method="get" name="sign up">
 					<p>
+
 						<input class="btn btn-primary" type="submit" value="Sign up"></input>
 					</p>
 				</form>
