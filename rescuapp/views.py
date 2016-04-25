@@ -45,7 +45,6 @@ def login():
     if request.method == 'GET':
         return render_template('login.html', form = form)
 
-   
     ## if sending a post request and form validates
     if form.validate_on_submit():
         ## query into database looking for user with email name
@@ -108,7 +107,7 @@ def signup():
     return render_template('signup.html', form=form)
 
 ## Routes to the order page
-@myapp.route('/order')
+@myapp.route('/order', methods=['GET', 'POST'])
 @login_required
 def order():
 
@@ -121,22 +120,21 @@ def order():
 
     orders = Order.query.all()
 
-    num = len(order)
+    num = len(orders)
 
     # if user submitted every field 
     if form.validate_on_submit():
 
         # possibly cbeck user hasnt submitted an item 
         # possibly parse database making sure item is in stock
-        order = Order(num+1, g.user.email, g.user.dormHall, g.user.dormNum, form.time.data, form.item1.data, form.item2.data
-            form.item3.data, form.item4.data, form.item5.data, form.item6.data, form.item7.data, datetime.now()) 
+        order = Order(id=num+1, email=g.user.email, dormHall=g.user.dormHall, dormNum=g.user.dormNum, time=form.time.data, item1=form.item1.data, item2=form.item2.data, item3=form.item3.data, item4=form.item4.data, item5=form.item5.data, item6=form.item6.data, item7=form.item7.data, date=datetime.now()) 
 
         db.session.add(order)
         db.session.commit()
 
-        return redirect(url_for(thankyou))
+        return redirect(url_for('thankyou'))
 
-    
+
     return render_template('order.html', form=form)
 
 
