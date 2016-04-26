@@ -1,3 +1,0 @@
-<User rjb2@princeton.edu lives in edwards 106>
-<User rjb22@princeton.edu lives in Edwards 106>
-<User rjb52@princeton.edu lives in Edwards 120>

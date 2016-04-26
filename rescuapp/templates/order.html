@@ -12,7 +12,13 @@
 				{{ form.hidden_tag() }}
 		        {{ form.time(placeholder="Choose a delivery time", style="width: 275px", class_="form-control") }}
 		        <br>
-		        {{ form.item1(placeholder="First item", style="width: 275px", class_="form-control") }}
+
+		        {% if form.item1.errors %}
+    			{% for error in form.item1.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+    			{% endif %}
+		        {{ form.item1(placeholder="First item (required) ", style="width: 275px", class_="form-control") }}
 		        <br>
 		        {{ form.item2(placeholder="Second item", style="width: 275px", class_="form-control") }}
 		        <br>
@@ -26,8 +32,13 @@
 		        <br>
 		        {{ form.item7(placeholder="Seventh item", style="width: 275px", class_="form-control") }}
 		        <br>
-		        <p><input class="btn btn-primary" type="submit" value="Submit your order"></p>
+		        <p><input class="btn btn-primary" type="submit" value="Submit your order" name='order'></p>
 			</form>
+
+			<h3> Make a mistake with your order? Need to cancel an order? Click here to delete your current order. You can then place another if you'd like </h3>
+			<form action="/order", method="POST", name="cancelorder">
+			<p><input type="submit", name="cancelorder", value="Delete my most recent order"/></p>
+
 		</center>
 	</div>
 </body>

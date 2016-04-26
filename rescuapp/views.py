@@ -113,28 +113,50 @@ def order():
 
     form = OrderForm()
 
-
     # render template if page load 
     if request.method == 'GET':
         return render_template('order.html', form=form)
 
-    orders = Order.query.all()
+    # if user is submitting an order 
+    if 'order' in request.form:
+        print "going here"
+        # if user submitted every field 
+        if form.validate_on_submit():
 
-    num = len(orders)
+            orders = Order.query.all()
+            num = len(orders)
+            # possibly cbeck user hasnt submitted an item 
+            # possibly parse database making sure item is in stock
+            order = Order(id=num+1, email=g.user.email, dormHall=g.user.dormHall, dormNum=g.user.dormNum, time=form.time.data, item1=form.item1.data, item2=form.item2.data, item3=form.item3.data, item4=form.item4.data, item5=form.item5.data, item6=form.item6.data, item7=form.item7.data, date=datetime.now()) 
+            db.session.add(order)
+            db.session.commit()
 
-    # if user submitted every field 
-    if form.validate_on_submit():
+            msg = Message('resqU Order Confirmation  ', sender=ADMINS[0], recipients=[g.user.email])
+            msg.body = 'Hey! We just got note of your order. This email is to confirm your order, and to request payment. Your order is as follows: {} {} {} {} {} {}. It will be delivered to {} {} at {}.  Your total comes out to $21.96. Using Venmo, payment must be sent to @resqUprinceton within 30 minutes or your order is nullified. When we receive your payment, you will receive another confirmation email. Thanks for using resqU!'.format(order.item1, order.item2, order.item3, order.item4, order.item5, order.item6, order.dormNum, order.dormHall, order.time)
+            mail.send(msg)
+            return redirect(url_for('thankyou'))
+        else: 
+            return render_template('order.html', form=form)
 
-        # possibly cbeck user hasnt submitted an item 
-        # possibly parse database making sure item is in stock
-        order = Order(id=num+1, email=g.user.email, dormHall=g.user.dormHall, dormNum=g.user.dormNum, time=form.time.data, item1=form.item1.data, item2=form.item2.data, item3=form.item3.data, item4=form.item4.data, item5=form.item5.data, item6=form.item6.data, item7=form.item7.data, date=datetime.now()) 
+       
 
-        db.session.add(order)
+    # if user wants to cancel their order 
+    elif 'cancelorder' in request.form:
+        user = g.user 
+
+        # final all orders by this user 
+        orders = user.orders.all()
+
+        # delete their most recent order 
+        
+        db.session.delete(orders[len(orders)-1])
         db.session.commit()
+        flash("order canceled successfully")
 
-        return redirect(url_for('thankyou'))
+        form = OrderForm()
+        return render_template('order.html', form=form)
 
-
+    print "just returning here"
     return render_template('order.html', form=form)
 
 
