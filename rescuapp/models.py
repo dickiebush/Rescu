@@ -34,8 +34,8 @@ class User(db.Model):
 ## Order model 
 ## Email, location, items, time
 class Order(db.Model):
-    id       = db.Column(db.Integer, primary_key=True)
-    email    = db.Column(db.String(120), db.ForeignKey('user.email'), index=True, unique=True)
+    id       = db.Column(db.Integer, primary_key=True, unique=True)
+    email    = db.Column(db.String(120), db.ForeignKey('user.email'), index=True)
     dormHall = db.Column(db.String(64), index=True)
     dormNum  = db.Column(db.Integer)
     time     = db.Column(db.String(10))

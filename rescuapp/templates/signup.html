@@ -12,21 +12,65 @@
 			<h3>Please provide the following information to create a new account</h3>
 			<form style="margin-top: 50px" action="" method="post" name="signup">
 				{{ form.hidden_tag() }}
+
+   				{% if form.fullName.errors %}
+    			{% for error in form.fullName.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+    			{% endif %}
+				{{ form.fullName(placeholder="Full name", style="width: 275px", class_="form-control") }}
+				<br>
+
+
+				{% if form.email.errors %}
+    			{% for error in form.email.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+    			{% endif %}
 				{{ form.email(placeholder="Email", style="width: 275px", class_="form-control") }}
 				<br>
+
+				{% if form.password.errors %}
+    			{% for error in form.password.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+    			{% endif %}
 				{{ form.password(placeholder="Password", style="width: 275px", class_="form-control") }}
 				<br>
+
+
 				{{ form.conPass(placeholder="Confirm password", style="width: 275px", class_="form-control") }}
 				<br>
-				{{ form.fullname(placeholder="Full name", style="width: 275px", class_="form-control") }}
-				<br>
+
+				{% if form.dormHall.errors %}
+    			{% for error in form.dormHall.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+   				{% endif %}
 				{{ form.dormHall(placeholder="Dorm Hall", style="width: 275px", class_="form-control") }}
 		        <br>
+
+		        {% if form.dormNum.errors %}
+    			{% for error in form.dormNum.errors %}
+    			<span style="color: red;">[{{ error }}]</span>
+    			{% endfor %}<br>
+    			{% endif %}
 		        {{ form.dormNum(placeholder="Dorm Num", style="width: 275px", class_="form-control") }}
 		        <br>
-		        <p><input class="btn btn-primary" type="submit" value="Submit"></p>
+		        <p><input class="btn btn-success" type="submit" value="Create Account"></p>
+
+
 			</form>
+			<br>
+			<br>
+			<br>
+			<p> Already have an account? Click below to Log In </p>
+    		<a class="btn btn-primary" href="/login">Log in</a>
 		</center>
 	</div>
+
+
+
+
 </body>
 </html>

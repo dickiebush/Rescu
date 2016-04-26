@@ -11,7 +11,7 @@ class LoginForm(Form):
 
 ## Sign up form, based on all information of db.User model 
 class SignUpForm(Form):
-    email    = StringField('email', validators=[validators.DataRequired(message="Forgot this one!"), validators.Email(message="This doesn't look like an email.."), validators.Length(message="4 to 25 characters please!",min=4, max=25)])
+    email    = StringField('email', validators=[validators.DataRequired(message="Forgot this one!"), validators.Email(message="This doesn't look like an email.."), validators.Regexp('^[a-zA-Z0-9._%+-]+@princeton.edu$', flags=0, message="Sorry, we are currently only support @princeton.edu email addresses"),validators.Length(message="4 to 25 characters please!",min=4, max=25)])
     password = PasswordField('password', validators=[validators.DataRequired("Whoops!"), validators.EqualTo('conPass', message="Passwords must match"), validators.Length(message="6 to 25 characters please!", min=6, max=25)])
     conPass  = PasswordField('conPass', validators=[validators.DataRequired("You forgot me!"), validators.EqualTo('password')],)
     fullName = StringField('fullname', validators=[validators.DataRequired("You forgot me!")])
@@ -20,7 +20,7 @@ class SignUpForm(Form):
 
 ## Order form -- some data pulled from user submitting and rest put through this form 
 class OrderForm(Form):
-    time  = SelectField(u'time', choices=[('9:00 AM', '10:00 AM', '11:00 AM')])
+    time  = SelectField(u'time', choices=[('9am','9:00 AM'), ('10am','10:00 AM'), ('11am', '11:00 AM')])
     item1 = StringField('first item', validators=[validators.DataRequired("You have to order something!")])
     item2 = StringField('second item')
     item3 = StringField('third item')
