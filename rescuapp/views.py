@@ -159,14 +159,10 @@ def order():
     print "just returning here"
     return render_template('order.html', form=form)
 
-
 @myapp.route('/thankyou')
 @login_required
 def thankyou():
     return "Your order has been sent, thanks!"
-
-
-
 
 ## Routes to the FAQ Page
 @myapp.route ('/faq')

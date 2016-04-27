@@ -32,12 +32,12 @@
 		        <br>
 		        {{ form.item7(placeholder="Seventh item", style="width: 275px", class_="form-control") }}
 		        <br>
-		        <p><input class="btn btn-primary" type="submit" value="Submit your order" name='order'></p>
+		        <p><input class="btn btn-success" type="submit" value="Submit your order" name='order'></p>
 			</form>
 
 			<h3> Make a mistake with your order? Need to cancel an order? Click here to delete your current order. You can then place another if you'd like </h3>
 			<form action="/order", method="POST", name="cancelorder">
-			<p><input type="submit", name="cancelorder", value="Delete my most recent order"/></p>
+			<p><input class="btn btn-large btn-danger" type="submit", name="cancelorder", value="Delete my most recent order"/></p>
 
 		</center>
 	</div>

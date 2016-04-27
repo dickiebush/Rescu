@@ -16,7 +16,7 @@ class SignUpForm(Form):
     conPass  = PasswordField('conPass', validators=[validators.DataRequired("You forgot me!"), validators.EqualTo('password')],)
     fullName = StringField('fullname', validators=[validators.DataRequired("You forgot me!")])
     dormHall = StringField('dormHall', validators = [validators.DataRequired("Please enter a valid dorm")])
-    dormNum  = IntegerField('dorm', validators = [validators.DataRequired("Please enter a valid dorm number")])
+    dormNum  = StringField('dorm', validators = [validators.DataRequired("Please enter a valid dorm number")])
 
 ## Order form -- some data pulled from user submitting and rest put through this form 
 class OrderForm(Form):
