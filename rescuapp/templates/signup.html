@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign up - Resqu</title>
+	<title>Sign up - resqU</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
 
 	<div style="margin-top: 80px">
 		<center>
-			<h2>Welcome to Resqu</h2>
-			<h3>Please provide the following information to create a new account</h3>
+			<div class="panel panel-default" style="opacity: 0.8;">
+				<div class="panel-body">
+					<h2>Welcome to resqU</h2>
+					<h3>Please provide the following information to create a new account</h3>
+				</div>
+			</div>
 			<form style="margin-top: 50px" action="" method="post" name="signup">
 				{{ form.hidden_tag() }}
 
@@ -64,15 +68,19 @@
 			<br>
 			<br>
 			<br>
-			<p> Already have an account? Click below to Log In </p>
+			<div class="panel panel-default" style="opacity: 0.8; width: 40%">
+				<h4> Already have an account? Click below to Log In </h4>
+    		</div>
     		<a class="btn btn-primary" href="/login">Log in</a>
+    		<br>
+    		<br>
 		</center>
 	</div>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/">ResqU</a>
+						<a class="navbar-brand" href="/">resqU</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav">

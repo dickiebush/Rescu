@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Order - Resqu</title>
+	<title>Order - resqU</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
-	<div style="margin-top: 50px">
+	<div style="margin-top: 80px">
 		<center>
-			<h3>Fill the following form to place an order</h3>
+			<div class="panel panel-default" style="opacity: 0.8">
+				<div class="panel-body">
+					<h3>Fill the following form to place an order</h3>
+				</div>
+			</div>
 			<form style="margin-top: 30px" action="" method="post" name="order">
 				{{ form.hidden_tag() }}
 		        {{ form.time(placeholder="Choose a delivery time", style="width: 275px", class_="form-control") }}
@@ -35,8 +39,10 @@
 		        <p><input class="btn btn-success" type="submit" value="Submit your order" name='order'></p>
 			</form>
 
-			<div style="width:450px">
-			<h3> Make a mistake with your order? Need to cancel an order? Click here to delete your current order. You can then place another if you'd like </h3>
+			<div class="panel panel-default" style="opacity: 0.8">
+				<div class="panel-body" style="width: 40%">
+					<h3> Make a mistake with your order? Need to cancel an order? Click here to delete your current order. You can then place another if you'd like </h3>
+				</div>
 			</div>
 			<form action="/order", method="POST", name="cancelorder">
 			<p><input class="btn btn-large btn-danger" type="submit", name="cancelorder", value="Delete my most recent order"/></p>
@@ -48,7 +54,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/">ResqU</a>
+						<a class="navbar-brand" href="/">resqU</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav">

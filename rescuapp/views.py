@@ -168,7 +168,7 @@ def order():
 @myapp.route('/thankyou')
 @login_required
 def thankyou():
-    return "Your order has been sent, thanks!"
+    return render_template('thankyou.html')
 
 ## Routes to the FAQ Page
 @myapp.route ('/faq')
