@@ -12,8 +12,8 @@ from datetime import datetime
 
 @myapp.route('/test')
 def test():
-    return render_template('test.html')
-    
+    return render_template('test.HTML')
+
 @myapp.route('/')
 @myapp.route('/index')
 def splash():
