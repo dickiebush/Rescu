@@ -21,7 +21,7 @@ def splash():
     if g.user is not None and g.user.is_authenticated:
         return redirect('/order')
 
-    return render_temaplte('splash.html')
+    return render_template('splash.html')
 
     ##if user has seen this before, take them to the login page 
     ##if request.cookies.get('rescuSplash') == 'yes':
