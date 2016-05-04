@@ -139,17 +139,17 @@ def order():
 
             msg = Message('resqU Order Confirmation  ', sender=ADMINS[0], recipients=[g.user.email])
             body = 'Hey! We just got note of your order. This email is to confirm your order, \
-            and to request payment. Your order is as follows: {} {} {} {} {} {}. It will be delivered to {} {} at {}.\
-              Your total comes out to $21.96. Using Venmo, payment must be sent to @resqUprinceton within 30 minutes or your \
-              order is nullified. When we receive your payment, you will receive another confirmation email. Thanks for using resqU!'.format(order.item1, order.item2, order.item3, order.item4, order.item5, order.item6, order.dormNum, order.dormHall, order.time)
+            and to request payment. Your order is as follows: {}, {}, {}, {}, {}, {}. It will be delivered to {} {} at {}.\
+              Your total comes out to $21.96. Clicking the link below will launch your Venmo app with all payment information \
+              preloaded. You are then one click away from payment! You will then get a confirmation email. Thanks for using ResqU!'.format(order.item1, order.item2, order.item3, order.item4, order.item5, order.item6, order.dormNum, order.dormHall, order.time)
             link = "venmo://paycharge?txt=pay&amount={}&note=Your Resqu Delivery Order&recipients=PrincetonResqu".format("21.93")
-            msg.html = '<p> {} </p> <a href="{}"> Click here to Pay! </a>'.format(body, link)
+            msg.html = '<p> {} </p> <a href="{}"> Click here to pay! </a> <br> <br> <br> <p> If there is an error in your order, \
+            simply go back to the order page, click delete your order, and then place it again.'.format(body, link)
 
             mail.send(msg)
             return redirect(url_for('thankyou'))
         else: 
             return render_template('order.html', form=form)
-
 
     # if user wants to cancel their order 
     elif 'cancelorder' in request.form:
@@ -159,7 +159,6 @@ def order():
         orders = user.orders.all()
 
         # delete their most recent order 
-        
         db.session.delete(orders[len(orders)-1])
         db.session.commit()
         flash("order canceled successfully")
