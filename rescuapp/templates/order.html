@@ -4,7 +4,7 @@
 	<title>Order - Resqu</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
 	<div style="margin-top: 50px">
 		<center>
 			<h3>Fill the following form to place an order</h3>
@@ -45,5 +45,21 @@
 
 		</center>
 	</div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/">ResqU</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+					  </ul>
+					  <ul class="nav navbar-nav navbar-right">
+					    <li><a href="/aboutus">About Us</a></li>
+					    <li><a href="/faq">FAQ</a></li>
+					    <li><a href="/careers">Careers</a></li>
+					  </ul>
+					</div>
+				</div>
+			</nav>
 </body>
 </html>

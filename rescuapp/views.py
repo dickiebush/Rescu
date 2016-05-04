@@ -180,6 +180,16 @@ def thankyou():
 def faq():
     return render_template('FAQ.html')
 
+## Routes to the About Us Page
+@myapp.route ('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
+## Routes to the Careers Page
+@myapp.route ('/careers')
+def careers():
+    return render_template('careers.html')
+
 ##############################
 #     Helper functions       #
 ##############################

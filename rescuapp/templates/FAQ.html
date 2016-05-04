@@ -7,7 +7,7 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
 
 <div class="jumbotron" style="width: 80%; margin-left: 10%; max-width: 1200px; margin-left: auto; margin-right: auto;">
       <div class="container">
@@ -99,13 +99,23 @@ The purchases will be placed outside your door by the set delivery time. Once th
         You can delete your order before the payment goes through, and submit a new request with the change.</div>    </div>
   </div>
       
-      
-      
-      
-      
-      
 </div>      
 </div>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">ResqU</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/aboutus">About Us</a></li>
+              <li class="active"><a href="/faq">FAQ<span class="sr-only">(current)</span></a></li>
+              <li><a href="/careers">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
 </body>
 </html>
