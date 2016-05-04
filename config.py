@@ -14,8 +14,8 @@ MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 587
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
-MAIL_USERNAME = 'richardjamesbush@gmail.com'
-MAIL_PASSWORD = 'lineman77'
+MAIL_USERNAME = 'princetonresqu@gmail.com'
+MAIL_PASSWORD = 'stealing1'
 
 # administrator list
-ADMINS = ['richardjamesbush@gmail.com']
+ADMINS = ['princetonresqu@gmail.com']
