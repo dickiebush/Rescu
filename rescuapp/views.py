@@ -10,6 +10,10 @@ from datetime import datetime
 ## Splash page allows users to log in or sign up
 
 
+@myapp.route('/test')
+def test():
+    return render_template('test.HTML')
+
 @myapp.route('/')
 @myapp.route('/index')
 def splash():
