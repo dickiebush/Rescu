@@ -4,7 +4,7 @@
 	<title>Sign up - Resqu</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%">
+<body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
 
 	<div style="margin-top: 80px">
 		<center>
@@ -68,6 +68,25 @@
     		<a class="btn btn-primary" href="/login">Log in</a>
 		</center>
 	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/">ResqU</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+					    <li><a href="/login">Log In</a></li>
+						<li class="active"><a href="/signup">Sign Up<span class="sr-only">(current)</span></a></li>
+					  </ul>
+					  <ul class="nav navbar-nav navbar-right">
+					    <li><a href="/aboutus">About Us</a></li>
+					    <li><a href="/faq">FAQ</a></li>
+					    <li><a href="/careers">Careers</a></li>
+					  </ul>
+					</div>
+				</div>
+			</nav>
 
 
 
