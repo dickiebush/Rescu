@@ -21,15 +21,18 @@ def splash():
     if g.user is not None and g.user.is_authenticated:
         return redirect('/order')
 
-    ## if user has seen this before, take them to the login page 
-    if request.cookies.get('rescuSplash') == 'yes':
-        print("cookie confirmed")
-        resp1 = make_response(redirect('/login'))
-        return resp1
-    else:
-        resp = make_response(render_template('splash.html'))
-        resp.set_cookie('rescuSplash', 'yes')   
-        return resp
+    return render_template('splash.html')
+
+    ##if user has seen this before, take them to the login page 
+    ##if request.cookies.get('rescuSplash') == 'yes':
+    ##    print("cookie confirmed")
+    ##    resp1 = make_response(redirect('/login'))
+    ##    return resp1
+    ##else:
+    ##    resp = make_response(render_template('splash.html'))
+    ##    resp.set_cookie('rescuSplash', 'yes')   
+    ##   return resp
+    ##"""
 
  
 ## Routes to the login page
@@ -83,7 +86,6 @@ def signup():
         flash("hello world")
         return render_template('signup.html', form = form)
    
-
     if form.validate_on_submit():
 
         if User.query.get(form.email.data) is None:
