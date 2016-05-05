@@ -10,9 +10,6 @@ from datetime import datetime
 ## Splash page allows users to log in or sign up
 
 
-@myapp.route('/test')
-def test():
-    return render_template('test.HTML')
 
 @myapp.route('/')
 @myapp.route('/index')
@@ -26,26 +23,10 @@ def splash():
         return redirect('/order')
 
     return render_template('splash.html')
-
-    ##if user has seen this before, take them to the login page 
-    ##if request.cookies.get('rescuSplash') == 'yes':
-    ##    print("cookie confirmed")
-    ##    resp1 = make_response(redirect('/login'))
-    ##    return resp1
-    ##else:
-    ##    resp = make_response(render_template('splash.html'))
-    ##    resp.set_cookie('rescuSplash', 'yes')   
-    ##   return resp
-    ##"""
-
  
 ## Routes to the login page
 @myapp.route('/login', methods=['GET','POST'])
 def login():
-
-    ##msg = Message('heres some text', sender=ADMINS[0], recipients=ADMINS)
-    ##msg.body = 'heres some text'
-    ##mail.send(msg)
 
     form = LoginForm()
 
@@ -142,7 +123,7 @@ def order():
             and to request payment. Your order is as follows: {}, {}, {}, {}, {}, {}. It will be delivered to {} {} at {}.\
               Your total comes out to $21.96. Once you are on your mobile phone, clicking the link below will launch your Venmo app with all payment information \
               preloaded. If you are on a desktop, switch to your mobile device. You are then one click away from payment! You will then get a confirmation email. Thanks for using ResqU!'.format(order.item1, order.item2, order.item3, order.item4, order.item5, order.item6, order.dormNum, order.dormHall, order.time)
-            link = "venmo://paycharge?txt=pay&amount={}&note=Your Resqu Delivery Order&recipients=PrincetonResqu".format("21.93")
+            link = "venmo://paycharge?txt=pay&amount={}&note=Your Resqu Delivery Order&recipients=PrincetonResqu".format("21.96")
             msg.html = '<p> {} </p> <a href="{}"> Click here to pay! </a> <br> <br> <br> <p> If there is an error in your order, \
             simply go back to the order page, click delete your order, and then place it again.'.format(body, link)
 
@@ -185,8 +166,12 @@ def aboutus():
     return render_template('aboutus.html')
 
 ## Routes to the Careers Page
-@myapp.route ('/careers')
+@myapp.route ('/careers', methods=['GET','POST'])
 def careers():
+
+    if 'logout' in request.form:
+
+    ## handle if its a logout request 
     return render_template('careers.html')
 
 ##############################
