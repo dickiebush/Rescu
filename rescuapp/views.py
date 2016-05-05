@@ -165,6 +165,13 @@ def faq():
 def aboutus():
     return render_template('aboutus.html')
 
+@myapp.route ('/logout')
+@login_required
+def logout():
+
+    logout_user()
+    return redirect(url_for('splash'))
+
 ## Routes to the Careers Page
 @myapp.route ('/careers', methods=['GET','POST'])
 def careers():
