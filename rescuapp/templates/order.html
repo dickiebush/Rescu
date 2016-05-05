@@ -4,8 +4,8 @@
 	<title>Order - resqU</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body style="background: url({{url_for('static', filename='cart1.jpg')}}); background-size: 100%; background-attachment: fixed">
-	<div style="margin-top: 80px">
+<body style="background: url({{url_for('static', filename='redbull.jpg')}}); background-size: 100%; background-attachment: fixed">
+	<div style="margin-top: 50px">
 		<center>
 			<div class="panel panel-default" style="opacity: 0.8">
 				<div class="panel-body">
@@ -39,14 +39,15 @@
 		        <p><input class="btn btn-success" type="submit" value="Submit your order" name='order'></p>
 			</form>
 
-			<div class="panel panel-default" style="opacity: 0.8">
-				<div class="panel-body" style="width: 40%">
-					<h3> Make a mistake with your order? Need to cancel an order? Click here to delete your current order. You can then place another if you'd like </h3>
-				</div>
-			</div>
-			<form action="/order", method="POST", name="cancelorder">
+			<div class="panel panel-default" style="opacity: 0.8; width: 45%">
+				<div class="panel-body" style="width: 90%">
+					<h3> Make a mistake with your order? Need to cancel an order?</h3>
+					<form action="/order", method="POST", name="cancelorder">
 			<p><input class="btn btn-large btn-danger" type="submit", name="cancelorder", value="Delete my most recent order"/></p>
 			</form>
+				</div>
+			</div>
+			
 			
 
 		</center>
@@ -58,6 +59,7 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav">
+					    <li><a href="/order">Log Out</a></li>
 					  </ul>
 					  <ul class="nav navbar-nav navbar-right">
 					    <li><a href="/aboutus">About Us</a></li>
