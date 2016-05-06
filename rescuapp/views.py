@@ -87,6 +87,7 @@ def signup():
         ## Send back error saying email is already signed up 
         else:
             print("This email is already signed up")
+            return render_template('signup.html', form=form);
     else:
         print "Form is not validating"
    
