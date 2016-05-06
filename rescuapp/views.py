@@ -10,7 +10,6 @@ from datetime import datetime
 ## Splash page allows users to log in or sign up
 
 
-
 @myapp.route('/')
 @myapp.route('/index')
 def splash():
@@ -176,9 +175,6 @@ def logout():
 @myapp.route ('/careers', methods=['GET','POST'])
 def careers():
 
-    if 'logout' in request.form:
-
-    ## handle if its a logout request 
     return render_template('careers.html')
 
 ##############################
