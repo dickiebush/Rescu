@@ -62,7 +62,7 @@ def login():
 def signup():
 
     ## error handling a signed in user going here directly 
-    logout_user()
+    #logout_user()
 
     form = SignUpForm()
 
@@ -89,7 +89,7 @@ def signup():
             print("This email is already signed up")
     else:
         print "Form is not validating"
-    ## LEFTOFF -- Put together sin up front end and backend 
+   
     return render_template('signup.html', form=form)
 
 ## Routes to the order page
